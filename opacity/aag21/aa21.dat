@@ -19,3 +19,8 @@
  Fe  7.460  0.085634 0.000028840 55.847000 0.0266509
  Ni  6.200  0.004946 0.000001585 58.700001 0.0014646
 
+CCCCCCC
+Subroutines mainopac.f, alexop.f, and opal95.f are used to read low and high
+temperature opacity tables and output opacity. Old version subroutines interpolated
+between a given Z1 and Z2 for diffusion. These news subroutines can automaticly 
+choose Zi determined by zpa(i).
