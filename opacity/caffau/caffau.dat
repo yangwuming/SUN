@@ -20,4 +20,10 @@ element atomic-mass Nx   mass-frac numb-frac
  Fe  55.847000  7.520001  0.087699  0.027268
  Ni  58.700001  6.239987  0.004837  0.001431
 
+CCCCCCC
+Subroutines mainopac.f, alexop.f, and opal95.f are used to read low and high
+temperature opacity tables and output opacity. Old version subroutines interpolated
+between a given Z1 and Z2 for diffusion. These news subroutines can automaticly 
+choose Zi determined by zpa(i).
+
 
