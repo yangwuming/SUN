@@ -1,0 +1,22 @@
+#! /bin/csh
+set argu1 = (  nrot12.cs    nrot13.cs      rot28.cs     nrotn10B0.cs nrotn10B2.cs \
+               rotn10B0.cs  nrotn01B.cs    nrotn03B.cs   rotn09B2.cs  rotn09B88.cs \
+               rotn09B-6.cs rotn18B-4.cs   rotn18B4.cs   roton18i.cs  rotn07c.cs \
+               gs98rotopd6.cs rotn18Bc.cs gs98rotopd7B.cs rotoni1.cs rotoni1.cs ) # j
+
+set argu2 = (B92S.txt B92E.txt B92R.txt A11S.txt A11E.txt \
+             A11R.txt B89S.txt B89E.txt B89R.txt BAR1.txt \
+             BAR2.txt BAR3.txt BAR4.txt BAR3opal.txt B89Rc.txt \
+             B89Rg.txt BAR3c.txt BAR3g.txt BAR3opalc1.txt BAR3opalc2.txt ) # j
+
+set j = 1
+#     awk 'BEGIN{print "   M/M_s  ", "   R/R_s    L/L_s        T         rho         p         cs  ",\
+#           "     Gamma1       kappa         X         Y        Z    Omega  "} \
+#      {if(NR>1 && $7>5776) printf " %10.8f %9.6f %9.7f %10.4e %10.4e %10.4e %11.5e %11.5e %11.5e %8.5f %8.5f %8.5f %9.2e \n",\
+#       $6, $1, $31/3.844e33, $7, $13, $12, $3, $2, $26, $4, $34, $5, $35 \
+#       }' < $argu1[$j] >> 'cs+'$argu2[$j]
+   while ( $j <= 20 )
+     awk '{printf " \n " $0 }' < $argu1[$j] >> 'cs+'$argu2[$j]
+     @ j ++
+     end
+
