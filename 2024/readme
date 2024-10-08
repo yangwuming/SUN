@@ -1,1 +1,2 @@
 Solar models.
+Models atm+MBS22.dat, atm+MBS22r1.dat, atm+MBS22r2.dat, atm+MBS22rt.dat include atmosphere structure which is determined by the Krishna Swamy (1966) T-tau relation.
